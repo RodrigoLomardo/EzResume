@@ -2,7 +2,7 @@ import Navbar from "./components/Navbar";
 
 function App() {
   return (
-    <div className="min-h-screen bg-[var(--bg-primary)] text-[var(--text-primary)] font-primary">
+    <div className="min-h-screen bg-[var(--bg-primary)] text-[var(--text-primary)] ">
       <Navbar />
       {/* outras seções aqui */}
     </div>
