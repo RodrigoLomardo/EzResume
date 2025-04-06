@@ -1,1 +1,13 @@
 @import "tailwindcss";
+
+@theme {
+    --indigo: #4F46E5;
+    --bg-primary: #0F172A;
+    --bg-second: #1E293B;
+    --text-primary: #F8FAFC;
+    --text-second: #94A3B8;
+    --border: #334155;
+    --hover: #6366F1;
+
+    --font-primary: "Inter", "sans-serif";
+}
