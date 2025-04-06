@@ -7,6 +7,7 @@ const Navbar: React.FC = () => {
 
   const isLoginPage = pathname === "/login";
   const isSobrePage = pathname === "/sobre";
+  const isCadastroPage = pathname === "/cadastro";
 
   return (
     <header className="w-full bg-[var(--bg-primary)] text-[var(--text-primary)]">
@@ -23,6 +24,25 @@ const Navbar: React.FC = () => {
         {/* Navegação dinâmica */}
         <div className="hidden md:flex items-center space-x-4">
           {isLoginPage && (
+            <>
+              <Link
+                to="/"
+                className="group duration-300 hover:text-[var(--hover)] transition-colors"
+              >
+                Home
+                <span className="block max-w-0 group-hover:max-w-full transition-all duration-300 h-0.5 bg-[var(--hover)]"></span>
+              </Link>
+              <Link
+                to="/sobre"
+                className="group duration-300 hover:text-[var(--hover)] transition-colors"
+              >
+                Sobre
+                <span className="block max-w-0 group-hover:max-w-full transition-all duration-300 h-0.5 bg-[var(--hover)]"></span>
+              </Link>
+            </>
+          )}
+
+          {isCadastroPage && (
             <>
               <Link
                 to="/"
@@ -60,7 +80,7 @@ const Navbar: React.FC = () => {
             </>
           )}
 
-          {!isLoginPage && !isSobrePage && (
+          {!isLoginPage && !isSobrePage && !isCadastroPage &&(
             <>
               <a
                 href="/sobre"
