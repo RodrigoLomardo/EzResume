@@ -1,12 +1,22 @@
-import Navbar from "./components/Navbar";
+// src/App.tsx
+import { Routes, Route } from "react-router-dom";
+import Layout from "./components/Layout";
+import Home from "./pages/Home";
+import Login from "./pages/Login";
+import Sobre from "./pages/Sobre";
 
-function App() {
+export default function App() {
   return (
-    <div className="min-h-screen bg-[var(--bg-primary)] text-[var(--text-primary)] ">
-      <Navbar />
-      {/* outras seções aqui */}
-    </div>
+    <Routes>
+      <Route element={<Layout />}>
+        <Route path="/" element={<Home />} />
+        <Route path="/sobre" element={<Sobre />} />
+        <Route path="/login" element={<Login />} />
+        
+      </Route>
+
+      {/* Rotas que não precisam da Navbar */}
+      
+    </Routes>
   );
 }
-
-export default App;

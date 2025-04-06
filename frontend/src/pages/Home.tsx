@@ -1,11 +1,8 @@
-import React from 'react'
-
-const Home = () => {
+// src/pages/Home.tsx
+export default function Home() {
   return (
-    <div>
-        <h1>EzResume</h1>
+    <div className="flex items-center justify-center min-h-screen bg-bg-primary text-text-primary">
+      <h1 className="text-3xl font-bold">EzResume</h1>
     </div>
-  )
+  );
 }
-
-export default Home
